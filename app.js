@@ -6,6 +6,9 @@ const countries = require('./countries.json');
  */
 function getCountryByIso3(isoCode){
     //Complete with your code
+    //Defino una variable para almacenar los datos del pais buscado y retorno el valor encontrado
+    var buscar = countries.find(element => element.iso3 == isoCode);
+    return buscar;
 }
 
 /**
