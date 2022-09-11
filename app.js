@@ -32,6 +32,21 @@ function getCountryTranslatedName(isoCode, language){
  */
 function getCountriesBySubregion(subregion){
     //Complete with your code
+    //Declaramos las variables auxiliares para recorrer las estructuras de datos.
+    var region = [];
+    var subregiones = [];
+    var aux = 0;
+    var cantidad = countries.length;
+    //Recorremos y comparamos para determinar si existe coincidencia entre la regiones 
+    //y la subregion enviada por parametro.
+    while(aux < cantidad) {
+        var region = countries[aux].subregion;
+        if (region == subregion) {
+            //recuperamos y agregamos el nombre de cada pais
+            subregiones.push(countries[aux].name);        }
+        aux++;
+    }
+    return subregiones;    
 }
 
 function main() {
